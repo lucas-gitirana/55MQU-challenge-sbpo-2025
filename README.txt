@@ -2,23 +2,24 @@
 INSTRUÇÕES DE COMPILAÇÃO E EXECUÇÃO
 ==============================================================
 
-Projeto: Resolução do Problema da Seleção de Pedidos Ótima via ILS
-Autores: Erick Augusto Warmling; Lucas Emanoel Gitirana; Marco Antonio Garlini Possamai
-Linguagem: Python
+Projeto: Resolução do Problema da Seleção de Pedidos Ótima via ILS  
+Autores: Erick Augusto Warmling; Lucas Emanoel Gitirana; Marco Antonio Garlini Possamai  
+Linguagem: Python  
 --------------------------------------------------------------
 
 1. PRÉ-REQUISITOS
 ------------------------------
 - Python 3.8 ou superior instalado
 
-2. COMPILAÇÃO
+2. SOBRE O PROJETO
 ------------------------------
-Este projeto está implementado em Python e **NÃO requer compilação**. A estrutura do projeto foi clonada do repositório https://github.com/mercadolibre/challenge-sbpo-2025.git e os novos arquivos integrados ao framework a partir do diretório challenge-sbpo-2025.
+Este projeto é uma implementação do algoritmo ILS (Iterated Local Search) para o Problema da Seleção de Pedidos Ótima. Ele foi desenvolvido com base em um framework inicial e expandido com novos arquivos e algoritmos para atender aos requisitos do desafio.
 
-Certifique-se de que os seguintes arquivos estejam em challenge-sbpo-2025:
+A estrutura principal do código está contida na pasta `challenge-sbpo-2025/`, onde foram integrados os arquivos desenvolvidos pela equipe.
 
-- solver.py         → Algoritmo principal
-- classes.py        → Definição das classes Pedido e Corredor
+Arquivos principais:
+- `solver.py`         → Algoritmo principal
+- `classes.py`        → Definição das classes Pedido e Corredor
 
 3. EXECUÇÃO
 ------------------------------
@@ -28,10 +29,10 @@ Para executar o algoritmo, abra o terminal e digite:
     python solver.py <arquivo_entrada> <arquivo_saida> <intensidade> <respeita_lb>
 
 Parâmetros:
-- <arquivo_entrada>   → caminho do arquivo da instância presente no diretório challenge-sbpo-2025/datasets (ex: datasets/a/instance_0020.txt)
-- <arquivo_saida>     → nome do arquivo onde será gravada a solução (ex: output.txt)
-- <intensidade>       → valor entre 0 e 1 que define a fração de pedidos a remover na perturbação
-- <respeita_lb>       → True ou False, indica se o LB deve ser respeitado durante a adição de pedidos
+- `<arquivo_entrada>`   → caminho do arquivo da instância (ex: `datasets/a/instance_0020.txt`)
+- `<arquivo_saida>`     → nome do arquivo onde será gravada a solução (ex: `output.txt`)
+- `<intensidade>`       → valor entre 0 e 1 que define a fração de pedidos a remover na perturbação
+- `<respeita_lb>`       → `True` ou `False`, indica se o LB deve ser respeitado durante a adição de pedidos
 
 Exemplo:
 
@@ -52,14 +53,14 @@ O arquivo de saída gerado seguirá o formato exigido pelo desafio:
 
 5. VALIDAÇÃO COM CHECKER DO DESAFIO
 ------------------------------
-Para verificar se a solução está correta, utilize o script checker.py fornecido:
+Para verificar se a solução está correta, utilize o script `checker.py`:
 
     python checker.py datasets/a/instance_0020.txt output.txt
 
 6. TEMPO DE EXECUÇÃO
 ------------------------------
-O algoritmo possui um tempo limite de execução configurado em 60 segundos.
-Esse valor pode ser alterado diretamente no arquivo solver.py na linha:
+O algoritmo possui um tempo limite de execução configurado em 60 segundos.  
+Esse valor pode ser alterado diretamente no arquivo `solver.py`, na linha:
 
     LIMITE_TEMPO = 60
 
